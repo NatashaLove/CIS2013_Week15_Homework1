@@ -17,7 +17,7 @@ Card::~Card(){
 		
 }
 
-void Card::AssignValues(char suit, char value){
+void Card::assignValues(char suit, char value){
 	
 	_suit = suit;
 	_value = value;
@@ -37,7 +37,7 @@ void Card::AssignValues(char suit, char value){
 	}
 }
 
-void Card::Print(){
+void Card::print(){
 	
 	switch (_value)	{
 	case 11:
@@ -74,7 +74,7 @@ void Card::Print(){
 }
 
 
-int Card::Weight(){
+int Card::weight(){
 	
 	return _weight;
 }

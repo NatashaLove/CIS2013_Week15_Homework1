@@ -28,8 +28,8 @@ class Card {
 	
 	//BlackJack ();
 	
-	void AssignValues(char suit, char value);
-	void Print();
-	int Weight();
+	void assignValues(char suit, char value);
+	void print();
+	int weight();
 	// bool is_used ();
 };

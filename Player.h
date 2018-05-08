@@ -18,11 +18,11 @@ class Player {
 	Player(string name);
 	~Player();
 
-	void AddCard(Card* card);
-	void Reset();
-	void Print();
-	int Points();
-	string Name();
+	void addCard(Card* card);
+	void reset();
+	void print();
+	int points();
+	string name();
 };
 
 
