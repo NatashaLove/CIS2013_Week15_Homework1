@@ -1,15 +1,28 @@
 #include <iostream>
-#include <fstream>
 #include <string>
-#include "blackJack.h"
+#include "Card.h"
 
 using namespace std;
 
-	BlackJack::BlackJack () {
-		card_deck = new string [52];
-	}
+	// BlackJack::BlackJack () {
+		// card_deck = new string [52];
+	// }
 	
-	int print_card_value(int card){
+Card::Card(){
+			
+}
+
+
+Card::~Card(){
+		
+}
+
+
+
+
+
+/*	
+int print_card_value(int card){
 	using namespace std;
 	switch(card){
 	 case 1:
@@ -35,3 +48,4 @@ using namespace std;
 		
 	}
 }
+*/
