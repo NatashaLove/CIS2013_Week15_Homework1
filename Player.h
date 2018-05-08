@@ -1,10 +1,32 @@
 #include <iostream>
-#include <fstream>
 #include <string>
-//g++ CIS2013_Week15_Quiz1.cpp
+//g++ CIS2013_Week15_Homework1.cpp
 
 using namespace std;
 
+class Card;
+
+class Player {
+	private:
+	
+	Card* _cards[12];
+	string _name;
+	int _cardsCount = 0;
+	
+	public:
+	
+	Player(string name);
+	~Player();
+
+	void AddCard(Card* card);
+	void Reset();
+	void Print();
+	int Points();
+	string Name();
+};
+
+
+/*
 class BlackJack {
 	private: 
 	//string file_name = "todo.dat";
@@ -25,3 +47,4 @@ class BlackJack {
 	BlackJack ();
 	
 };
+*/

@@ -17,8 +17,67 @@ Card::~Card(){
 		
 }
 
+void Card::AssignValues(char suit, char value){
+	
+	_suit = suit;
+	_value = value;
+	
+	switch (_value)	{
+	case 11:
+		_weight = 1; // Ace = 1;
+		break;
+	case 12:		
+	case 13:
+	case 14:	
+		_weight = 10; // Jack, Queen, King = 10;
+		break;
+	default:
+		_weight = value; // КАК ЭТО?
+		break;
+	}
+}
+
+void Card::Print(){
+	
+	switch (_value)	{
+	case 11:
+		cout << "Ace";
+		break;
+	case 12:
+		cout << "Jack";
+		break;
+	case 13:
+		cout << "Queen";
+		break;
+	case 14:
+		cout << "King";
+		break;
+	default:
+		cout << ((int)_value);
+		break;
+	}
+	
+	switch (_suit)	{
+	case 0:
+		cout << " of Spades";
+		break;
+	case 1:
+		cout << " of Clubs";
+		break;
+	case 2:
+		cout << " of Diamonds";
+		break;
+	case 3:
+		cout << " of Hearts";
+		break;
+	}
+}
 
 
+int Card::Weight(){
+	
+	return _weight;
+}
 
 
 /*	
