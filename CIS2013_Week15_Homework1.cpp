@@ -1,7 +1,8 @@
 #include <iostream>
-#include <fstream>
 #include <string>
-#include "blackJack.h"
+#include <time.h>
+#include "Card.h"
+#include "Player.h"
 
 using namespace std;
 
