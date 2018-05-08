@@ -1,27 +1,28 @@
 #include <iostream>
-#include <fstream>
 #include <string>
-//g++ CIS2013_Week15_Quiz1.cpp
+//g++ CIS2013_Week15_Homework1.cpp
 
 using namespace std;
 
-class BlackJack {
+class Card {
 	private: 
-	//string file_name = "todo.dat";
-	string *card_deck; // will be array - deck of cards - make it 2D - call in main : BlackJack blackjack [52];
+	
+	//string *card_deck; // will be array - deck of cards - make it 2D - call in main : BlackJack blackjack [52];
 	// in .cpp : card_deck = new string [52];
 	//int length =0;
-	int next=0;
-	string card;
-	string suit, value;
+	// int next=0;
+	// string card;
+	// string suit, value;
 	
-	//void file_read();
-	//void file_save();
-	
+	char _suit; //(diamonds, clubs, hearts, spades)
+	char _value; // (A-K)
+	int _weight; // (i.e. is the card an Ace worth 1)
+	bool is_used;// (is the card already out of play) 
 	
 	public:
 		
 	// default constructor
-	BlackJack ();
+	//BlackJack ();
+	
 	
 };
