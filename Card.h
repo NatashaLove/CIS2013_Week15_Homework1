@@ -22,7 +22,14 @@ class Card {
 	public:
 		
 	// default constructor
+	Card();
+	// default destructor
+	~Card();
+	
 	//BlackJack ();
 	
-	
+	void AssignValues(char suit, char value);
+	void Print();
+	int Weight();
+	// bool is_used ();
 };
