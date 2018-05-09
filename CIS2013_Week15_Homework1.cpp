@@ -14,9 +14,16 @@ Card* get_card(Card** deck, int& last){
 	deck[last--] = c; //сохраняем адрес карты, чтобы  потом было что чистить
 	return c;
 }
+// question to continue the game
+void question (char& answer) {
+	
+	cout << "Do you want to hit more? y/n" << endl;
+	cin >> answer;
+}
 
 int main(){
 	char over = 0;
+	char answer='y';
 	string name;
 	
 	cout << endl;
@@ -25,10 +32,10 @@ int main(){
 	cout << endl;
 	cout << "What is your name? "<< endl;
 	cin >> name;
-	cout << "Let's play, " << name << endl;
+	cout << "						Let's play, " << name << endl;
 	cout << "			********************************************************" << endl;
 	
-	while (over != 'x')	{
+	while (answer= 'y')	{
 		
 		int last = 51;
 		Player dealer("Dealer");
@@ -80,10 +87,13 @@ int main(){
 			
 			bool b = true;
 			char x;
-			cin >> x;
 			
-			while (x != 'x') {
+			question (answer);
+			//cin >> x;
+			
+			while (answer == 'y') {
 				
+					
 				c = get_card(&deck[0], last);
 				player.addCard(c);
 				player.print();
@@ -100,8 +110,9 @@ int main(){
 					b = false;
 					break;
 				}
-				cin >> x;
-			}
+				//cin >> x;
+				question (answer);
+			}	
 			
 // ЗАЧЕМ ЭТА while loop? 
 // ПОЧЕМУ ==18? И ПРИ ЭТОМ ИГРОК ВЫИГРЫВАЕТ?
@@ -131,8 +142,9 @@ int main(){
 		{
 			delete deck[i];
 		}
-
-		cin >> over;
+		
+		cout << "Do you wanna play another game? (y/n): " << endl;
+		cin >> answer;
 	}	
 			
 	

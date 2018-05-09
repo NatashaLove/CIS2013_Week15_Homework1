@@ -32,12 +32,16 @@ void Card::assignValues(char suit, char value){
 		_weight = 10; // Jack, Queen, King = 10;
 		break;
 	default:
-		_weight = value; // КАК ЭТО?
+		_weight = value; // КАК ЭТО? - char - это число  от −128 до 127 , символом он становится только при печати. 
+		// Поэтому, char преобразуется в int без вопросов, вот обратно с вопросами, 
+		// потому что int может не уместиться в char (но тоже не ошибка, если знаешь, что делаешь)
 		break;
 	}
 }
 
 void Card::print(){
+	// если и suit и value - это оба char - как это они в switch могут быть переменными - числами? 
+	// см. пояснения line 35 : _weight = value;
 	
 	switch (_value)	{
 	case 11:
