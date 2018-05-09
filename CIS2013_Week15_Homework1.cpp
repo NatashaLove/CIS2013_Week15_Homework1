@@ -26,7 +26,13 @@ int main(){
 	cin >> name;
 	cout << "Let's play, " << name << endl;
 	
-	
+	while (over != 'x')	{
+		
+		int last = 51;
+		Player dealer("Dealer");
+		Player player(name);
+		
+		
 	
 	
 	/*
