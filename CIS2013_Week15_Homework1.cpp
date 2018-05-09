@@ -43,6 +43,21 @@ int main(){
 			}
 		}
 	
+		srand(time(0));
+		
+		Card* c = get_card(&deck[0], last);
+		player.AddCard(c);
+		c = get_card(&deck[0], last);
+		player.AddCard(c);
+		player.Print();
+		cout << endl;
+
+		c = get_card(&deck[0], last);
+		dealer.AddCard(c);
+		c = get_card(&deck[0], last);
+		dealer.AddCard(c);
+		dealer.Print();
+		cout << endl;
 	
 	/*
 	BlackJack blackjack [52];// 2D array for the deck
