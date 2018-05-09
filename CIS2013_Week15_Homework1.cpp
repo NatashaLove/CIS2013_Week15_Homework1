@@ -58,6 +58,23 @@ int main(){
 		dealer.AddCard(c);
 		dealer.Print();
 		cout << endl;
+		
+		if (player.Points() == 21)
+		{
+			if (dealer.Points() == 21)
+			{
+				cout << endl << "Equal points! Split!" << endl;
+			}
+			else
+			{
+				cout << endl << player.Name() << " win!";
+			}
+		}
+		else if (player.Points() > 21)
+		{
+			cout << endl << dealer.Name() << " win!";
+		}
+		
 	
 	/*
 	BlackJack blackjack [52];// 2D array for the deck
