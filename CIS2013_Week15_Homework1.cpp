@@ -109,18 +109,16 @@ int main(){
 				c = get_card(&deck[0], last);
 				dealer.addCard(c);
 				dealer.print();
-				if (dealer.points() > 21)
-				{
+				if (dealer.points() > 21){
+					
 					cout << endl << player.name() << " wins!";
 					b = false;
-				}
-				else if ((dealer.points() == 21) || (dealer.points() >= player.points()))
-				{
+				} else if ((dealer.points() == 21) || (dealer.points() >= player.points())){
+					
 					cout << endl << dealer.name() << " wins!";
 					b = false;
-				}
-				else if (dealer.points() == 18)
-				{
+				} else if (dealer.points() == 18){
+					
 					cout << endl << dealer.name() << " stays!" << endl;
 					cout << player.name() << " wins!";
 					b = false;
@@ -128,7 +126,13 @@ int main(){
 			}
 		}
 
-			
+		for (int i = 0; i < 52; i++)
+		{
+			delete deck[i];
+		}
+
+		cin >> over;
+	}	
 			
 	
 	/*
