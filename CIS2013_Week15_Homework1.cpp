@@ -23,7 +23,8 @@ void question (char& answer) {
 
 int main(){
 	char over = 0;
-	char answer='y';
+	char answ='y';
+	char answer;
 	string name;
 	
 	cout << endl;
@@ -35,7 +36,7 @@ int main(){
 	cout << "						Let's play, " << name << endl;
 	cout << "			********************************************************" << endl;
 	
-	while (answer= 'y')	{
+	while (answ== 'y')	{
 		
 		int last = 51;
 		Player dealer("Dealer");
@@ -129,7 +130,7 @@ int main(){
 					
 					cout << endl << dealer.name() << " wins!";
 					b = false;
-				} else if (dealer.points() == 18){
+				} else if (dealer.points() >= 18){
 					
 					cout << endl << dealer.name() << " stays!" << endl;
 					cout << player.name() << " wins!";
@@ -143,8 +144,9 @@ int main(){
 			delete deck[i];
 		}
 		
+		cout << endl;
 		cout << "Do you wanna play another game? (y/n): " << endl;
-		cin >> answer;
+		cin >> answ;
 	}	
 			
 	
