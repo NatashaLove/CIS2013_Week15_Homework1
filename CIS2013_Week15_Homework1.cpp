@@ -7,6 +7,7 @@
 using namespace std;
 
 Card* get_card(Card** deck, int& last){
+	
 	int n = rand() % 52;
 	Card* c = deck[n];
 	deck[n] = deck[last];
@@ -38,7 +39,7 @@ int main(){
 			for (int j = 0; j < 4; j++){
 				
 				Card* c = new Card();
-				c->AssignValues(j, i);
+				c->assignValues(j, i);
 				deck[(i - 2) * 4 + j] = c;
 			}
 		}
@@ -46,33 +47,34 @@ int main(){
 		srand(time(0));
 		
 		Card* c = get_card(&deck[0], last);
-		player.AddCard(c);
+		player.addCard(c);
 		c = get_card(&deck[0], last);
-		player.AddCard(c);
-		player.Print();
+		player.addCard(c);
+		player.print();
 		cout << endl;
 
 		c = get_card(&deck[0], last);
-		dealer.AddCard(c);
+		dealer.addCard(c);
 		c = get_card(&deck[0], last);
-		dealer.AddCard(c);
-		dealer.Print();
+		dealer.addCard(c);
+		dealer.print();
 		cout << endl;
 		
-		if (player.Points() == 21)
+		// ВОЗМОЖНО НЕ нужно сплит..
+		if (player.points() == 21)
 		{
-			if (dealer.Points() == 21)
+			if (dealer.points() == 21)
 			{
 				cout << endl << "Equal points! Split!" << endl;
 			}
 			else
 			{
-				cout << endl << player.Name() << " win!";
+				cout << endl << player.name() << " wins!";
 			}
 		}
-		else if (player.Points() > 21)
+		else if (player.points() > 21)
 		{
-			cout << endl << dealer.Name() << " win!";
+			cout << endl << dealer.name() << " wins!";
 		}
 		
 	
