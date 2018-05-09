@@ -181,10 +181,11 @@ int main(){
 				cout << endl << player.name() << " wins!";
 				break;
 					//exit(0);
-			} else if (dealer.points() < player.points()){
+			} else if ((player.points() <= 21) && (player.points() > dealer.points())){
+			//(dealer.points() < player.points()){
 					
 					cout << endl << player.name() << " wins!";
-				break;
+				//break;
 					// //exit(0);
 				}
 			
