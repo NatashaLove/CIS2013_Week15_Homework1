@@ -32,7 +32,16 @@ int main(){
 		Player dealer("Dealer");
 		Player player(name);
 		
-		
+		Card* deck[52];
+		for (int i = 2; i <= 14; i++){
+			
+			for (int j = 0; j < 4; j++){
+				
+				Card* c = new Card();
+				c->AssignValues(j, i);
+				deck[(i - 2) * 4 + j] = c;
+			}
+		}
 	
 	
 	/*
