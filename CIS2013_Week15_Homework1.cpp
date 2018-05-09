@@ -101,26 +101,28 @@ int main(){
 				}
 				cin >> x;
 			}
-
-			while (b)
-			{
+			
+// ЗАЧЕМ ЭТА while loop? 
+// ПОЧЕМУ ==18? И ПРИ ЭТОМ ИГРОК ВЫИГРЫВАЕТ?
+			while (b){
+				
 				c = get_card(&deck[0], last);
-				dealer.AddCard(c);
-				dealer.Print();
-				if (dealer.Points() > 21)
+				dealer.addCard(c);
+				dealer.print();
+				if (dealer.points() > 21)
 				{
-					cout << endl << player.Name() << " win!";
+					cout << endl << player.name() << " wins!";
 					b = false;
 				}
-				else if ((dealer.Points() == 21) || (dealer.Points() >= player.Points()))
+				else if ((dealer.points() == 21) || (dealer.points() >= player.points()))
 				{
-					cout << endl << dealer.Name() << " win!";
+					cout << endl << dealer.name() << " wins!";
 					b = false;
 				}
-				else if (dealer.Points() == 18)
+				else if (dealer.points() == 18)
 				{
-					cout << endl << dealer.Name() << " hold!" << endl;
-					cout << player.Name() << " win!";
+					cout << endl << dealer.name() << " stays!" << endl;
+					cout << player.name() << " wins!";
 					b = false;
 				}
 			}
