@@ -61,22 +61,48 @@ int main(){
 		cout << endl;
 		
 		// ВОЗМОЖНО НЕ нужно сплит..
-		if (player.points() == 21)
-		{
-			if (dealer.points() == 21)
-			{
+		if (player.points() == 21){
+			
+			if (dealer.points() == 21){
+				
 				cout << endl << "Equal points! Split!" << endl;
-			}
-			else
-			{
+			} else {
+				
 				cout << endl << player.name() << " wins!";
 			}
-		}
-		else if (player.points() > 21)
-		{
+			
+		} else if (player.points() > 21){
+			
 			cout << endl << dealer.name() << " wins!";
-		}
-		
+			
+		} else {
+			
+			bool b = true;
+			char x;
+			cin >> x;
+			
+			while (x != 'x') {
+				
+				c = get_card(&deck[0], last);
+				player.addCard(c);
+				player.print();
+				
+				if (player.points() == 21)
+				{
+					cout << endl << player.name() << " win!";
+					b = false;
+					break;
+				}
+				else if (player.points() > 21)
+				{
+					cout << endl << dealer.name() << " win!";
+					b = false;
+					break;
+				}
+				cin >> x;
+			}
+
+			
 	
 	/*
 	BlackJack blackjack [52];// 2D array for the deck
