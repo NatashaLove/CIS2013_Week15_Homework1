@@ -87,21 +87,46 @@ int main(){
 				player.addCard(c);
 				player.print();
 				
-				if (player.points() == 21)
-				{
-					cout << endl << player.name() << " win!";
+				if (player.points() == 21){
+					
+					cout << endl << player.name() << " wins!";
 					b = false;
 					break;
 				}
-				else if (player.points() > 21)
-				{
-					cout << endl << dealer.name() << " win!";
+				else if (player.points() > 21){
+					
+					cout << endl << dealer.name() << " wins!";
 					b = false;
 					break;
 				}
 				cin >> x;
 			}
 
+			while (b)
+			{
+				c = get_card(&deck[0], last);
+				dealer.AddCard(c);
+				dealer.Print();
+				if (dealer.Points() > 21)
+				{
+					cout << endl << player.Name() << " win!";
+					b = false;
+				}
+				else if ((dealer.Points() == 21) || (dealer.Points() >= player.Points()))
+				{
+					cout << endl << dealer.Name() << " win!";
+					b = false;
+				}
+				else if (dealer.Points() == 18)
+				{
+					cout << endl << dealer.Name() << " hold!" << endl;
+					cout << player.Name() << " win!";
+					b = false;
+				}
+			}
+		}
+
+			
 			
 	
 	/*
