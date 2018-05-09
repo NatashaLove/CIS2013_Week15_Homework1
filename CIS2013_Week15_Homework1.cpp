@@ -123,15 +123,18 @@ int main(){
 			if (dealer.points() == 21){
 				
 				cout << endl << "Dealer wins!" << endl;
+				cout << "-----------------------"<< endl;
 			} else {
 				
-				cout << endl << player.name() << " wins!";
+				cout << endl << player.name() << " wins!"<< endl;
+				cout << "-----------------------"<< endl;
 			}
 			
 		} else if (player.points() > 21){
 			
-			cout << endl << dealer.name() << " wins!";
-			
+			cout << endl << dealer.name() << " wins!"<< endl;
+			cout << "-----------------------"<< endl;
+
 		} else {
 			
 			bool b = true;
@@ -150,14 +153,16 @@ int main(){
 				
 				if (player.points() == 21){
 					
-					cout << endl << player.name() << " wins!";
-					b = false;
+					cout << endl << player.name() << " wins!"<< endl;
+					cout << "-----------------------"<< endl;
+					// b = false;
 					break;
 				}
 				else if (player.points() > 21){
 					
-					cout << endl << dealer.name() << " wins!";
-					b = false;
+					cout << endl << dealer.name() << " wins!"<< endl;
+					cout << "-----------------------"<< endl;
+					// b = false;
 					break;
 				}
 				//cin >> x;
@@ -173,18 +178,21 @@ int main(){
 			}
 			if ((dealer.points() <= 21) && (dealer.points() >= player.points())){
 			
-				cout << endl << dealer.name() << " wins!";
+				cout << endl << dealer.name() << " wins!"<< endl;
+				cout << "-----------------------"<< endl;
 				break;
 			}
 			if (dealer.points() > 21){
 					
-				cout << endl << player.name() << " wins!";
+				cout << endl << player.name() << " wins!"<< endl;
+				cout << "-----------------------"<< endl;
 				break;
 					//exit(0);
-			} else if ((player.points() <= 21) && (player.points() > dealer.points())){
+			} else if ((player.points() < 21) && (player.points() > dealer.points())){
 			//(dealer.points() < player.points()){
 					
-					cout << endl << player.name() << " wins!";
+					cout << endl << player.name() << " wins!"<< endl;
+					cout << "-----------------------"<< endl;
 				//break;
 					// //exit(0);
 				}
