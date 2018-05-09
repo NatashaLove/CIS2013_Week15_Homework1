@@ -34,12 +34,14 @@ void Player::reset(){
 void Player::print(){
 	
 	cout << _name << ':'<< endl;
+	cout << "---------"<< endl;
 	for (int i = 0;i < _cardsCount;i++)	{
 		
 		_cards[i]->print();
 		cout << endl;
 	}
-	cout << "Total points: " << points() << endl;;
+	cout << "Total points: " << points() << endl;
+	cout << "-------------------"<< endl;
 }
 
 // СТРЕЛОЧКУ -> НЕ ПРОХОДИЛИ..нужно поменять функцию (или изучить стрелочку)

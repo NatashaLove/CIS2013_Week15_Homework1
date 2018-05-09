@@ -91,6 +91,7 @@ int main(){
 			bool b = true;
 			char x;
 			
+			cout << endl;
 			question (answer);
 			//cin >> x;
 			
@@ -124,16 +125,20 @@ int main(){
 				dealer.print();
 				
 			}
+			if ((dealer.points() <= 21) && (dealer.points() >= player.points())){
 			
+				cout << endl << dealer.name() << " wins!";
+			}
 			if (dealer.points() > 21){
 					
 				cout << endl << player.name() << " wins!";
 					//exit(0);
-			} else if ((dealer.points() == 21) || (dealer.points() >= player.points())){
+			} 
+			// else if ((dealer.points() == 21) || (dealer.points() >= player.points())){
 					
-					cout << endl << dealer.name() << " wins!";
-					//exit(0);
-				}
+					// cout << endl << dealer.name() << " wins!";
+					// //exit(0);
+				// }
 			
 				
 // ЗАЧЕМ ЭТА while loop? 
