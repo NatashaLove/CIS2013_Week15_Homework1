@@ -13,9 +13,10 @@ class Card;
 class Player {
 	private:
 	
-	Card* _cards[12];
+	Card* _cards[12]; // array of twelve (maximum hand) pointers to addresses of objects of type Card*
+	// т.е. в каждой из 12-ти ячеек массива содержится адрес объекта Card
 	string _name;
-	int _cardsCount = 0;
+	int _cardsCount = 0; // сколько карт получил игрок
 	
 	public:
 	
@@ -23,7 +24,7 @@ class Player {
 	~Player();
 
 	void addCard(Card* card);
-	void reset();
+	//void reset();
 	void print();
 	int points();
 	string name();
