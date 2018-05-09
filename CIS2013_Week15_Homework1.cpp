@@ -180,13 +180,13 @@ int main(){
 			
 				cout << endl << dealer.name() << " wins!"<< endl;
 				cout << "-----------------------"<< endl;
-				break;
+				//break;
 			}
 			if (dealer.points() > 21){
 					
 				cout << endl << player.name() << " wins!"<< endl;
 				cout << "-----------------------"<< endl;
-				break;
+				//break;
 					//exit(0);
 			} else if ((player.points() < 21) && (player.points() > dealer.points())){
 			//(dealer.points() < player.points()){
