@@ -26,6 +26,7 @@ int main(){
 	cout << "What is your name? "<< endl;
 	cin >> name;
 	cout << "Let's play, " << name << endl;
+	cout << "			********************************************************" << endl;
 	
 	while (over != 'x')	{
 		
