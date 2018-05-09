@@ -33,11 +33,10 @@ int main(){
 	cout << endl;
 	cout << "What is your name? "<< endl;
 	cin >> name;
-	cout << "						Let's play, " << name << endl;
-	cout << "			********************************************************" << endl;
+	
 	
 	while (answ== 'y')	{
-		
+				
 		int last = 51;
 		Player dealer("Dealer");
 		Player player(name);
@@ -52,6 +51,9 @@ int main(){
 				deck[(i - 2) * 4 + j] = c;
 			}
 		}
+	
+	cout << "						Let's play, " << name << endl;
+	cout << "			********************************************************" << endl;
 	
 		srand(time(0));
 		
@@ -115,8 +117,28 @@ int main(){
 				question (answer);
 			}	
 			
+			while (dealer.points() <= 17) {
+				
+				c = get_card(&deck[0], last);
+				dealer.addCard(c);
+				dealer.print();
+				
+			}
+			
+			if (dealer.points() > 21){
+					
+				cout << endl << player.name() << " wins!";
+					//exit(0);
+			} else if ((dealer.points() == 21) || (dealer.points() >= player.points())){
+					
+					cout << endl << dealer.name() << " wins!";
+					//exit(0);
+				}
+			
+				
 // ЗАЧЕМ ЭТА while loop? 
 // ПОЧЕМУ ==18? И ПРИ ЭТОМ ИГРОК ВЫИГРЫВАЕТ?
+/*
 			while (b){
 				
 				c = get_card(&deck[0], last);
@@ -137,6 +159,7 @@ int main(){
 					b = false;
 				}
 			}
+			*/
 		}
 
 		for (int i = 0; i < 52; i++)
